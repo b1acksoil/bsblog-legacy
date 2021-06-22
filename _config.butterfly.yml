@@ -94,14 +94,14 @@ disable_top_img: false
 index_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/home.gif
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/home.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/home.gif
 
 # The banner image of archive page
-archive_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/archives.jpg
+archive_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/archives.gif
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子标籤页面的 top_img)
-tag_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/tags.jpg
+tag_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/tags.gif
 
 # The banner image of tag page
 # format:
@@ -110,7 +110,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分类页面的 top_img)
-category_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/categories.jpg
+category_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/categories.gif
 
 # The banner image of category page
 # format:
@@ -127,7 +127,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/archives.jpg
+    - https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/archives.gif
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
