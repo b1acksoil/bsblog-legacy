@@ -1,5 +1,5 @@
 ---
-title: 新一代Vue组件库 Quasar CLI 的基本使用
+title: Quasar - 新一代MD风格Vue组件库
 tags:
   - Quasar
   - Vue
@@ -18,12 +18,19 @@ date: 2021-06-23 20:15:03
 
 尽管已出现 [Vue Material](https://vuematerial.io/) 这种 Material Design 风格的组件库，但其功能存在很大的缺失。寻寻觅觅之下，我找到了这一款组件库 —— [Quasar](http://www.quasarchs.com/)。
 
+![Quasar 中文网首页](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-homepage.jpg)
+
+来看看一些组件的实例：
+![按钮](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-buttons.jpg)
+
+![表单](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-form.jpg)
+
+![窗口](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-bar.jpg)
 
 在提供大量美观组件的同时，Quasar 提供了一套完整的多平台构建解决方案。从SPA（单页面富应用）到桌面平台（Eletron），甚至适用于Android和iOS的移动APP（Cordova/Capacitor），只需一份代码，Quasar 就能完成全平台的构建。
 
 完整的中文文档，全面的平台支持，大量的美观组件，活跃的开发社区（据说开发者全职维护这个项目），等什么？用它。
 
-![Quasar 中文网首页](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-homepage.jpg)
 
 ---
 
@@ -159,6 +166,7 @@ $ tree
 ```
 
 ## 基本命令
+### 开发
 创建好项目之后，我们在项目根目录下运行如下命令：
 ```bash
 $ quasar dev
@@ -168,6 +176,7 @@ $ quasar dev
 
 使用`quasar dev`启动的服务器具有热重载功能，可以在修改代码后即时预览。
 
+### 打包
 一段时间开发后，我们要将项目打包部署，就可以用到`quasar build`命令：
 ```bash
 $ quasar build
