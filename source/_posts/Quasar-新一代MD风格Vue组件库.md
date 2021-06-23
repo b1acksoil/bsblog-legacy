@@ -9,6 +9,7 @@ categories:
   - 前端
 abbrlink: d1a3df2c
 top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/top_img.png
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/top_img.png
 date: 2021-06-23 20:15:03
 ---
 
