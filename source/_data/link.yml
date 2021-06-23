@@ -1,0 +1,15 @@
+- class_name: 友情链接
+  class_desc: Hign on life together.
+  link_list:
+  - name: Youranium
+    link: https://youranium.github.io/
+    avatar: https://youranium.github.io/avatar.jpg
+    descr: You 4 life.
+
+- class_name: 网站推荐
+  class_desc: 一些好用的网站
+  link_list:
+  - name: 下载
+    link: https://d.setctl.com/
+    avatar: 
+    descr: 一个代理下载站，可以用来下载一些樯外站点的资源
