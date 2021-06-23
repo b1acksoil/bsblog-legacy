@@ -8,6 +8,7 @@ tags:
 categories:
   - 前端
 abbrlink: d1a3df2c
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/top_img.png
 date: 2021-06-23 20:15:03
 ---
 
@@ -18,14 +19,14 @@ date: 2021-06-23 20:15:03
 
 尽管已出现 [Vue Material](https://vuematerial.io/) 这种 Material Design 风格的组件库，但其功能存在很大的缺失。寻寻觅觅之下，我找到了这一款组件库 —— [Quasar](http://www.quasarchs.com/)。
 
-![Quasar 中文网首页](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-homepage.jpg)
+![Quasar 中文网首页](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/quasar-homepage.jpg)
 
 来看看一些组件的实例：
-![按钮](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-buttons.jpg)
+![按钮](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/quasar-preview-buttons.png)
 
-![表单](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-form.jpg)
+![表单](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/quasar-preview-form.png)
 
-![窗口](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-preview-bar.jpg)
+![窗口](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/quasar-preview-bar.png)
 
 在提供大量美观组件的同时，Quasar 提供了一套完整的多平台构建解决方案。从SPA（单页面富应用）到桌面平台（Eletron），甚至适用于Android和iOS的移动APP（Cordova/Capacitor），只需一份代码，Quasar 就能完成全平台的构建。
 
@@ -166,15 +167,21 @@ $ tree
 ```
 
 ## 基本命令
-### 开发
+### 预览
 创建好项目之后，我们在项目根目录下运行如下命令：
 ```bash
 $ quasar dev
 ```
 编译成功后，打开`http://localhost:8080/`，即可看到Quasar的欢迎界面。
-![欢迎界面](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/quasar-dev.jpg)
+![欢迎界面](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/d1a3df2c/quasar-dev.jpg)
 
 使用`quasar dev`启动的服务器具有热重载功能，可以在修改代码后即时预览。
+
+### 开发
+使用过程与Vue CLI3基本相同，不再赘述。  
+Vue组件可以参考[组件文档](http://www.quasarchs.com/vue-components/ajax-bar/)  
+Quasar提供了一系列便利的css类，具体可参照[风格和特性](http://www.quasarchs.com/style/typography)  
+
 
 ### 打包
 一段时间开发后，我们要将项目打包部署，就可以用到`quasar build`命令：
