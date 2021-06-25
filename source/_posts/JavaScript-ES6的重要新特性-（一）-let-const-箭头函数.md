@@ -129,7 +129,7 @@ let squ = (n) => n**2
 ```javascript
 let say = () => {
   console.log('hello')
-
+}
 let mul = (a, b) => a * b
 ```
 
