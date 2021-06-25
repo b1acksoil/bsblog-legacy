@@ -461,6 +461,8 @@ google_adsense:
 site_verification:
   - name: google-site-verification
     content: XF3RNX87JHam6l_IyDMHw1qMReoW2NydfDqO-1PashU
+  - name: msvalidate.01
+    content: E90A6FA0EDF286F6B4E5543CAD722A18
   # - name: baidu_site_verification
   #   content: xxxxxxx
 
