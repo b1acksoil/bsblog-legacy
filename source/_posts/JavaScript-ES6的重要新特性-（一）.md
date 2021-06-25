@@ -1,5 +1,5 @@
 ---
-title: JavaScript ES6的重要新特性
+title: JavaScript ES6的重要新特性 (一)
 tags:
   - JavaScript
   - ES6
@@ -162,5 +162,3 @@ let obj = {
 
 console.log(obj.add()())   // 25
 ```
----
-# 未完待更...
