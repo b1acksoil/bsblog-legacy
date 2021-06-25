@@ -1,5 +1,5 @@
 ---
-title: JavaScript ES6的重要新特性 (一)
+title: JavaScript ES6的重要新特性 (一) let/const、箭头函数
 tags:
   - JavaScript
   - ES6
