@@ -80,7 +80,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /img/favicon.png
+favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
