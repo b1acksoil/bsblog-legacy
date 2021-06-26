@@ -1461,6 +1461,11 @@ shebang-regex@^3.0.0:
   resolved "https://registry.npm.taobao.org/shebang-regex/download/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
+social-share.js@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.nlark.com/social-share.js/download/social-share.js-1.0.16.tgz#1fd4a91c46c8c6835670f11472ecb2e293215310"
+  integrity sha1-H9SpHEbIxoNWcPEUcuyy4pMhUxA=
+
 source-map-resolve@^0.5.2:
   version "0.5.3"
   resolved "https://registry.npm.taobao.org/source-map-resolve/download/source-map-resolve-0.5.3.tgz#190866bece7553e1f8f267a2ee82c606b5509a1a"
