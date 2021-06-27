@@ -174,7 +174,7 @@ console.log(n, a, h, foo)    // Max 20 painting undefined
 ### 使用丢弃变量解构
 有的时候我们不想取出中间的值，就可以这样写：
 ```javascript
-const [ name, , hobby ]    // 使用了丢弃变量
+const [ name, , hobby ] = arr    // 使用了丢弃变量
 console.log(name, hobby)    // Max painting
 ```
 ### 使用扩展运算符解构

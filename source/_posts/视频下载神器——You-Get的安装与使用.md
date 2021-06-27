@@ -139,7 +139,7 @@ $ git clone git://github.com/soimort/you-get.git
 ```
 
 ### Homebrew (Mac Only)
-使用`Homebrew`安装
+使用`Homebrew`安装（若未安装Homebrew可以参考这篇文章：[Mac必备神器Homebrew](https://zhuanlan.zhihu.com/p/59805070)）
 ```bash
 $ brew install you-get
 ```
@@ -232,7 +232,10 @@ Downloading 某科学的超电磁炮：第24话 亲爱的朋友.cmt.xml ...
 > `--format=dash-flv360`选项也可简写为`-F dash-flv360`
 
 {% note info %}
-如果你发现下载完视频没有合并（典型例子是当前目录下出现了两段断开的视频，名字分别为`视频名[00].mp4`和`视频名[01].mp4`），则可能是因为你没有正确安装FFMpeg。FFMpeg的安装可以参照这篇博客：[FFmpeg使用教程（一）-windows安装配置ffmpeg](https://www.jianshu.com/p/2b609afb9800)
+如果你发现下载完视频没有合并（典型例子是当前目录下出现了两段断开的视频，名字分别为`视频名[00].mp4`和`视频名[01].mp4`），则可能是因为你没有正确安装FFMpeg。  
+各Linux发行版可以使用各自的包管理器安装，如Debian/Ubuntu使用`sudo apt install ffmpeg`  
+Mac： 使用Homebrew `brew install ffmpeg`  
+Windows中FFMpeg的安装可以参照这篇博客：[FFmpeg使用教程（一）-windows安装配置ffmpeg](https://www.jianshu.com/p/2b609afb9800)
 {% endnote %}
 
 ## 断点续传
