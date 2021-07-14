@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'BlackSoil - Redefine the life.'
-# subtitle: 'Redefine the life.'
+title: 'BlackSoil'
+subtitle: 'Redefine the life.'
 description: "BlackSoil (b1acksoil)'s blog, recreated on June 22, 2021.\n本博客致力于分享开发相关的经验。博主为一名自学前端的高中生，如有见解不当之处还请多多指正。\nGitHub地址: https://github.com/b1acksoil/"
 keywords:
   - blacksoil
