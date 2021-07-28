@@ -124,6 +124,6 @@ deploy:
   - type: git
     repo: 
       github: git@github.com:b1acksoil/b1acksoil.github.io.git
-      gitee: git@gitee.com:b1acksoil/b1acksoil.gitee.io.git
+      # gitee: git@gitee.com:b1acksoil/b1acksoil.gitee.io.git
     branch: master
   - type: baidu_url_submitter
