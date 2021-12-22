@@ -1,15 +1,15 @@
 ---
 title: 视频下载神器——You-Get的安装与使用
+date: 2021-06-27 01:43:57
+abbrlink: 74f1c0a5
 tags:
   - You-Get
   - Python
   - 工具
 categories:
   - 工具分享
-abbrlink: 74f1c0a5
 top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/74f1c0a5/top_img.png'
 cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/74f1c0a5/top_img.png'
-date: 2021-06-27 01:43:57
 ---
 
 看视频正看得兴起的时候突然缓冲半天？想要在没有网的环境下观看，却发现没有会员不能下载？为解决这种层出不穷的麻烦事，在此介绍一款开源的视频下载神器——[You-Get](https://github.com/soimort/you-get)。
@@ -212,7 +212,7 @@ streams:             # Available quality and codecs
 ```
 决定好了想要下载哪种格式和清晰度，执行以下命令来下载：
 ```output
-$ you-get --format=dash-flv360 https://b23.tv/ep84363 
+$ you-get --format=dash-flv360 https://b23.tv/ep84363
 site:                Bilibili
 title:               某科学的超电磁炮：第24话 亲爱的朋友
 stream:
@@ -228,24 +228,24 @@ Merging video parts... Merged into 某科学的超电磁炮：第24话 亲爱的
 
 Downloading 某科学的超电磁炮：第24话 亲爱的朋友.cmt.xml ...
 ```
-> 上面例子中同时下载的`xml`文件是b站的弹幕文件。   
+> 上面例子中同时下载的`xml`文件是b站的弹幕文件。
 > `--format=dash-flv360`选项也可简写为`-F dash-flv360`
 
 {% note info %}
-如果你发现下载完视频没有合并（典型例子是当前目录下出现了两段断开的视频，名字分别为`视频名[00].mp4`和`视频名[01].mp4`），则可能是因为你没有正确安装FFMpeg。  
-各Linux发行版可以使用各自的包管理器安装，如Debian/Ubuntu使用`sudo apt install ffmpeg`  
-Mac： 使用Homebrew `brew install ffmpeg`  
+如果你发现下载完视频没有合并（典型例子是当前目录下出现了两段断开的视频，名字分别为`视频名[00].mp4`和`视频名[01].mp4`），则可能是因为你没有正确安装FFMpeg。
+各Linux发行版可以使用各自的包管理器安装，如Debian/Ubuntu使用`sudo apt install ffmpeg`
+Mac： 使用Homebrew `brew install ffmpeg`
 Windows中FFMpeg的安装可以参照这篇博客：[FFmpeg使用教程（一）-windows安装配置ffmpeg](https://www.jianshu.com/p/2b609afb9800)
 {% endnote %}
 
 ## 断点续传
-在下载过程中，你可能不小心终止了下载（例如按了`Ctrl+C`或突然断网）。这时你会在当前目录找到后缀名为`.download`的文件。这是`you-get`下载的缓存文件，下一次重新执行下载命令时，`you-get`会自动从上次的断点重新开始下载，而不用担心需要重新下载。  
+在下载过程中，你可能不小心终止了下载（例如按了`Ctrl+C`或突然断网）。这时你会在当前目录找到后缀名为`.download`的文件。这是`you-get`下载的缓存文件，下一次重新执行下载命令时，`you-get`会自动从上次的断点重新开始下载，而不用担心需要重新下载。
 不想要断点续传时，可以直接删除`.download`文件。
 
 ## 下载版权资源
 有一些视频是无法直接下载的，例如各大网站的会员电影、电视剧，b站的大会员番剧等等。此时需要用到`you-get`的另外一项功能：加载cookies。
-> cookies （从客户端的硬盘读取数据的一种技术）  
-> cookies中文名称为小型文本文件，是某些网站为了辨别用户身份，进行Session跟踪而储存在用户本地终端上的数据（通常经过加密），由用户客户端计算机暂时或永久保存的信息。  
+> cookies （从客户端的硬盘读取数据的一种技术）
+> cookies中文名称为小型文本文件，是某些网站为了辨别用户身份，进行Session跟踪而储存在用户本地终端上的数据（通常经过加密），由用户客户端计算机暂时或永久保存的信息。
 > 摘自 [百度百科](https://baike.baidu.com/item/Cookies/187064)
 
 目前`you-get`支持两种格式的cookies：Mozilla Firefox(火狐浏览器)`cookies.sqlite` 和 Netscape `cookies.txt`
@@ -254,9 +254,9 @@ Windows中FFMpeg的安装可以参照这篇博客：[FFmpeg使用教程（一）
 Google Chrome/Chromium 浏览器有插件（例如[EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg/related?utm_source=chrome-ntp-icon&pli=1)）可以将cookies文件转换成you-get可以识别的格式（如Netscape `cookies.txt`）
 {% endnote %}
 
-首先在以上浏览器中打开需要下载的网站，并登录会员帐号  
-登录完成后找到cookies文件：  
-Windows：`C:\Users\<你的用户名>\AppData\Roaming\Mozilla\Firefox\Profiles\cookies.sqlite`  
+首先在以上浏览器中打开需要下载的网站，并登录会员帐号
+登录完成后找到cookies文件：
+Windows：`C:\Users\<你的用户名>\AppData\Roaming\Mozilla\Firefox\Profiles\cookies.sqlite`
 Linux/Mac：`~/.mozilla/firefox/一些随机的字母.default-release/cookies.sqlite`
 
 将其**复制**到一个方便的位置，以便稍后引用

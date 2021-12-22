@@ -1,14 +1,14 @@
 ---
 title: 一篇文章让你彻底弄懂 ES6 Promise
+date: 2021-07-14 21:14:10
+abbrlink: 11fd8cd0
 tags:
   - JavaScript
   - ES6
 categories:
   - 前端
-abbrlink: 11fd8cd0
 top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/11fd8cd0/top_img.png
 cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/11fd8cd0/top_img.png
-date: 2021-07-14 21:14:10
 ---
 
 ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，异步编程的解决方案 —— Promise。
@@ -26,7 +26,7 @@ ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，�
 **举个通俗一点的例子：** 你去某机关单位办事，先去提交申请，然后一直傻站在那里等结果出来，拿到结果再回家，这种一步一步依次进行的方法就是**同步**；如果你提交了申请就去做些别的事情，例如看看电影逛逛街，等处理结果出来了打电话通知你（回调）再回去拿，这种方式就是**异步**。
 
 ## 异步的使用情景
-在 JS 中，最常见的需要用到异步的情景就是网络请求了。  
+在 JS 中，最常见的需要用到异步的情景就是网络请求了。
 我们把 JS 的执行过程想象成一条时间轴，所有的 JS 代码都是同步执行的。如果我们要进行一次网络请求，例如获取用户的数据，那么就需要等待网络请求结束之后才能执行其他的 JS 代码。这意味着用户在网络请求的过程中将无事可做，并且如果用户的网络环境较差，用户可能一直干等下去，这显然不是一个好的使用体验。所以我们一般使用异步的方法来处理网络请求。
 
 还有一种常见的使用异步的情景是定时任务。我们常见的`setTimeout`, `setInterval`都是异步函数，它们接受一个回调函数作为参数，在定时结束后自动调用该函数。
@@ -119,7 +119,7 @@ new Promise((resolve, reject) => {
 ```js
 new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve()       // 这样在结束异步操作后就会调用resolve函数 
+    resolve()       // 这样在结束异步操作后就会调用resolve函数
   }, 1000)          //     也就是下面then方法中的内容
 }).then(() => {
   console.log('一秒过去')
@@ -150,7 +150,7 @@ new Promise((resolve, reject) => {
 })
 ```
 ### resolve 传值
-如果异步操作得到了一个结果需要处理（例如网络请求返回的数据），直接将处理代码和异步操作写在一起是不够优雅的，也违背了使用`Promise`的目的。`Promise`的目的是将异步操作与处理代码分开，以使代码结构清晰。  
+如果异步操作得到了一个结果需要处理（例如网络请求返回的数据），直接将处理代码和异步操作写在一起是不够优雅的，也违背了使用`Promise`的目的。`Promise`的目的是将异步操作与处理代码分开，以使代码结构清晰。
 我们可以把需要处理的内容作为参数传入`resolve`函数，并在`then`方法的回调函数中也定义一个参数，`Promise`会自动将内容传进去：
 ```js
 new Promise((resolve, reject) => {
@@ -164,7 +164,7 @@ new Promise((resolve, reject) => {
 ```
 
 ### reject
-说完了第一个参数函数`resolve`，我们再来说说第二个参数函数`reject`。  
+说完了第一个参数函数`resolve`，我们再来说说第二个参数函数`reject`。
 `reject`用于捕获异步操作中产生的错误。向`reject`函数中传入的值会被传进`catch`方法的回调函数中：
 ```js
 new Promise((resolve, reject) => {
@@ -215,7 +215,7 @@ new Promise((resolve, reject) => {
 该方法于 ES2018 引入标准。
 
 ## Promise.all()
-`Promise.all`方法可以将多个`Promise`对象包装成一个`Promise`对象。  
+`Promise.all`方法可以将多个`Promise`对象包装成一个`Promise`对象。
 该方法接受一个数组作为参数，数组内的所有元素都必须为`Promise`对象。
 ```js
 // 假设 p1, p2, p3 都为 Promise对象

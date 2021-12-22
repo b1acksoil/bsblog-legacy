@@ -1,5 +1,6 @@
 ---
 title: FFmpeg的基本使用
+date: 2021-08-25 01:10:38
 abbrlink: 972a1a27
 tags:
   - FFmpeg
@@ -8,11 +9,10 @@ categories:
   - 工具分享
 top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/top_img.png'
 cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/top_img.png'
-date: 2021-08-25 01:10:38
 ---
 
 > FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
-> 
+>
 > ——百度百科
 
 简单来说，FFmpeg 是一套集视频/音频的格式转换、合成、裁切等等实用功能于一体的开源工具。截止本文写作日期，FFmpeg 已支持 **365** 种不同的视频/音频格式。FFmpeg 发展十余年，在世界上的应用十分广泛，例如有时我们用到的优酷，爱奇艺等播放器软件，内部都集成了 FFmpeg （虽然一些是修改过的）。FFmpeg 内置了领先的音视频编码库，可以有效利用多线程和GPU加速，为用户在诸多使用场景下提供了优秀的体验。
@@ -55,7 +55,7 @@ $ pkg install ffmpeg
 
 # 使用
 {% note warning %}
-Windows 和 macOS 由于不是使用包管理器安装，需要使用 `ffmpeg` 可执行文件的绝对路径来代替下文的 `ffmpeg` 命令。常见的做法是将可执行文件拖入命令窗口来自动填入绝对路径。  
+Windows 和 macOS 由于不是使用包管理器安装，需要使用 `ffmpeg` 可执行文件的绝对路径来代替下文的 `ffmpeg` 命令。常见的做法是将可执行文件拖入命令窗口来自动填入绝对路径。
 除了使用这种办法，也可以使用添加环境变量的方式，具体请自行百度。
 {% endnote %}
 
@@ -199,12 +199,12 @@ $ ffmpeg -i 输入文件 -vf fps=每秒帧数 -qscale 0 -f image2 输出文件�
 
 # 问题解决
 ## Too many packets buffered...
-> 报错：  
-> Too many packets buffered for output stream xxx.  
+> 报错：
+> Too many packets buffered for output stream xxx.
 > xxx frames left in the queue on closing
 
-有些视频数据有问题，导致视频处理过快，容器封装时队列溢出。  
-可以通过增大容器封装队列大小解决，比如设置最大为1024：  
+有些视频数据有问题，导致视频处理过快，容器封装时队列溢出。
+可以通过增大容器封装队列大小解决，比如设置最大为1024：
 在**输入文件后方**添加 `-max_muxing_queue_size 1024` ，例如：
 ```bash
 $ ffmpeg -i video.mp4 -max_muxing_queue_size 1024 output.avi

@@ -1,7 +1,7 @@
 ---
 title: Mac风格 Ubuntu Desktop 美化教程
-abbrlink: 2682f5c2
 date: 2021-07-28 16:51:15
+abbrlink: 2682f5c2
 tags:
   - Ubuntu
   - 美化
@@ -164,7 +164,7 @@ $ ./tweaks.sh -d -c dark    # 使用暗色
 ![Dash to Dock 样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/dash-to-dock.png)
 
 #### 锁屏样式
-使用 `-g` 或 `--gdm` 选项更改Dash to Dock的样式，需要以 root 身份运行。  
+使用 `-g` 或 `--gdm` 选项更改Dash to Dock的样式，需要以 root 身份运行。
 `-b`、`-n`、`-N` 选项可以搭配使用。
 
 ```bash
