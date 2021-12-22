@@ -15,7 +15,7 @@ menu:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
 	项目: /projects/ || fas fa-code
-	文档: https://docs.blacksoil.top/ || fas fa-book
+	# 文档: https://docs.blacksoil.top/ || fas fa-book
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
