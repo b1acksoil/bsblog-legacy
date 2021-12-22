@@ -13,6 +13,14 @@
 - class_name: 网站推荐
   class_desc: 一些好用的网站
   link_list:
+  - name: Pexels
+    link: https://www.pexels.com/zh-cn
+    avatar: https://www.pexels.com/assets/_svg/logo-5ee7c1d7e25a1c5066520202eb5c41bd4c0a479e9a68911aa54d785c2e22d565.svg
+    descr: 免费、高质量的图片/视频素材库
+  - name: Wallroom
+    link: https://wallroom.io/
+    avatar: https://wallroom.io/img/wallroom.png
+    descr: 免费高清壁纸下载站
   - name: 下载
     link: https://d.setctl.com/
     avatar: 
