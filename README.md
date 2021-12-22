@@ -14,6 +14,5 @@ made with :heart:.
 ```bash
 $ git clone git@github.com:b1acksoil/bsblog.git
 $ cd bsblog
-$ git submodule init
-$ git submodule update
+$ git submodule update --init
 ```

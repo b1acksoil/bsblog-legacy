@@ -333,6 +333,7 @@ valine:
 waline:
   serverURL: https://blacksoil-blog-comments-waline.vercel.app/  # Waline server address url
   avatar: retro # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
+  avatarCDN: https://gravatar.cat.net/avatar/
   bg: # waline background
   placeholder: 发表你的感想...
   visitor: true
