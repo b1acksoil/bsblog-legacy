@@ -7,8 +7,8 @@ tags:
   - 美化
 categories:
   - 教程
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/top_img.png
-cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/top_img.png
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.png
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.png
 ---
 
 前些天把树莓派4B的系统换成了Ubuntu Desktop 21.04，使用没什么问题，驱动支持也非常好，遂美化之。
@@ -17,13 +17,13 @@ cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/top_i
 
 先看看美化前的效果：
 
-![美化前 1](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/beforeBeautify1.png)
-![美化前 2](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/beforeBeautify2.png)
+![美化前 1](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/beforeBeautify1.png)
+![美化前 2](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/beforeBeautify2.png)
 
 再看看美化后：
 
-![美化后 1](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/afterBeautify1.png)
-![美化后 2](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/afterBeautify2.png)
+![美化后 1](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/afterBeautify1.png)
+![美化后 2](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/afterBeautify2.png)
 
 # 准备工作
 - 一台安装了 Ubuntu Desktop 系统（18.04版本及以上）的设备
@@ -42,11 +42,11 @@ $ sudo apt install gnome-tweaks chrome-gnome-shell -y
 
 随后打开 [https://extensions.gnome.org/](https://extensions.gnome.org/) ，点击 `Click here to install browser extension` 安装浏览器插件
 
-![安装浏览器插件](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/InstallBrowserExt.png)
+![安装浏览器插件](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/InstallBrowserExt.png)
 
 随后搜索 [User Themes](https://extensions.gnome.org/extension/19/user-themes/) 插件安装，点击页面右上角的开关，把`OFF`改成`ON`就可以了，如果弹出确认窗口就点确认
 
-![安装插件](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/UserThemeExt.png)
+![安装插件](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/UserThemeExt.png)
 
 # Dock 栏
 Ubuntu Desktop 自带的 Dock 栏并不是很好用，可定制性也不强，这里使用 `Dash to Dock` 插件增强。
@@ -55,16 +55,16 @@ Ubuntu Desktop 自带的 Dock 栏并不是很好用，可定制性也不强，�
 
 然后去 Gnome Tweaks 里启用：
 
-![启用 Dash to Dock 插件](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/EnableDashToDockExt.png)
+![启用 Dash to Dock 插件](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/EnableDashToDockExt.png)
 
 随后你可以右键 Dock 栏上的应用抽屉图标，打开Dash to Dock设置，这里可以配置一系列设置，如位置、图标大小、透明度等等。
 
-![Dash to Dock 设置](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/DashToDockSettings.png)
+![Dash to Dock 设置](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/DashToDockSettings.png)
 
 # Mac 风格主题安装
 文首那种 Mac 风格的美化包是 [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme/)。
 
-![宣传图](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/macbook.png)
+![宣传图](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/macbook.png)
 
 作者建议使用脚本方式安装，这样可以体验主题的全部功能，例如锁屏美化，Dock栏美化等等。方法如下：
 
@@ -107,7 +107,7 @@ $ ./install.sh -t all            # 安装所有
 ```
 默认：安装 `default` 颜色
 
-![主题模式/主题色](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/colors-themes.png)
+![主题模式/主题色](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/colors-themes.png)
 
 #### 文件管理侧边栏宽度
 使用 `-s` 或 `--sidebar` 选项更改文件管理的侧边栏宽度
@@ -116,7 +116,7 @@ $ ./install.sh -s 220
 ```
 默认：使用 `default` 宽度
 
-![文件管理侧边栏宽度](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/sidebars.png)
+![文件管理侧边栏宽度](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/sidebars.png)
 
 #### 活动窗口管理器图标
 使用 `-i` 或 `--icon` 选项更改活动窗口管理器的图标（最左上角的那个）
@@ -125,7 +125,7 @@ $ ./install.sh -i ubuntu
 ```
 默认：使用苹果logo
 
-![活动窗口管理器图标](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/icons.png)
+![活动窗口管理器图标](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/icons.png)
 
 #### 文件管理器样式
 使用 `-N` 或 `--nautilus-style` 选项更改文件管理器的样式
@@ -134,7 +134,7 @@ $ ./install.sh -N mojave
 ```
 默认：`default` 样式
 
-![文件管理器样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/nautilus.png)
+![文件管理器样式](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/nautilus.png)
 
 ### 进阶配置
 这里列出了一些进阶配置，如Firefox浏览器美化，锁屏美化，Dash to Dock美化等等
@@ -150,9 +150,9 @@ $ ./tweaks.sh -f             # 使用默认样式
 $ ./tweaks.sh -f monterey    # 使用 Monterey 样式
 ```
 
-![WhiteSur 样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/firefox-whitesur.png)
+![WhiteSur 样式](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/firefox-whitesur.png)
 
-![Monterey 样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/firefox-monterey.png)
+![Monterey 样式](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/firefox-monterey.png)
 
 #### Dash to Dock
 使用 `-d` 或 `--dash-to-dock` 选项更改Dash to Dock的样式
@@ -161,7 +161,7 @@ $ ./tweaks.sh -d            # 根据主题选择
 $ ./tweaks.sh -d -c dark    # 使用暗色
 ```
 
-![Dash to Dock 样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/dash-to-dock.png)
+![Dash to Dock 样式](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/dash-to-dock.png)
 
 #### 锁屏样式
 使用 `-g` 或 `--gdm` 选项更改Dash to Dock的样式，需要以 root 身份运行。
@@ -176,15 +176,15 @@ $ sudo ./tweaks.sh -g -n            # 不模糊壁纸
 $ sudo ./tweaks.sh -g -N            # 不调暗壁纸
 ```
 
-![锁屏样式](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurRepoImg/gdm.png)
+![锁屏样式](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurRepoImg/gdm.png)
 
 更多选项可以输入 `./tweaks.sh -h` 来查看。
 
 # 图标
 图标也可以使用 WhiteSur 的，来自于同一个作者。
 
-![预览 1](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurIconsRepoImg/preview.png)
-![预览 2](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/WhiteSurIconsRepoImg/preview01.png)
+![预览 1](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurIconsRepoImg/preview.png)
+![预览 2](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/WhiteSurIconsRepoImg/preview01.png)
 
 ## 安装
 与主题本体类似，需要使用 `git` 将仓库克隆到本地：
@@ -206,7 +206,7 @@ $ ./install.sh
 ## 应用主题
 有时主题不会自动应用至系统，这时需要手动打开一开始安装的美化管理工具。应用列表里找到 `优化` 应用或者终端输入 `gnome-tweaks`
 
-![Gnome Tweaks 工具](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/2682f5c2/GnomeTweaks.png)
+![Gnome Tweaks 工具](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/GnomeTweaks.png)
 
 都选择 WhiteSur 即可。如果配置后不生效，重启后即可看到效果。
 

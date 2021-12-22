@@ -86,24 +86,24 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/avatar.jpg
+  img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/avatar.jpg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/home.jpg
+index_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/home.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/home.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/home.jpg
 
 # The banner image of archive page
-archive_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/archives.jpg
+archive_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/archives.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子标籤页面的 top_img)
-tag_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/tags.jpg
+tag_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/tags.jpg
 
 # The banner image of tag page
 # format:
@@ -112,7 +112,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分类页面的 top_img)
-category_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/categories.jpg
+category_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/categories.jpg
 
 # The banner image of category page
 # format:
@@ -129,7 +129,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/archives.jpg
+    - https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/archives.jpg
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -411,7 +411,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: 
+  custom_text:
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -597,7 +597,7 @@ font:
 # Font settings for the site title and site subtitle
 # 左上角网站名字 主页居中网站名字
 blog_title_font:
-  font_link: 
+  font_link:
   font-family: Coda
 
 # The setting of divider icon (水平分隔线图标设置)

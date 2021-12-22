@@ -7,8 +7,8 @@ tags:
   - 工具
 categories:
   - 工具分享
-top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/top_img.png'
-cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/top_img.png'
+top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.png'
+cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.png'
 ---
 
 > FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
@@ -27,7 +27,7 @@ cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/top_
 
 前往 [FFmpeg Windows Builds](https://www.gyan.dev/ffmpeg/builds/)，往下翻找到 `release` 一栏，点击第一个链接下载（ffmpeg-release-full.7z）
 
-![Release Full Build](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/972a1a27/download_windows.png)
+![Release Full Build](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/download_windows.png)
 
 使用 [7-Zip](https://www.7-zip.org/) 等支持 `7z` 格式的解压软件解压即可
 

@@ -7,8 +7,8 @@ tags:
   - ES6
 categories:
   - 前端
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/11fd8cd0/top_img.png
-cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/11fd8cd0/top_img.png
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.png
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.png
 ---
 
 ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，异步编程的解决方案 —— Promise。

@@ -1,8 +1,8 @@
 ---
 title: 关于
 date: 2021-06-23 04:10:57
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn@latest/img/about.jpg
 type: about
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/about.jpg
 ---
 
 > 我是一名普通的高中生，16岁。住在中国的江南一带，未婚。我在高中上学。每天都要学习到晚上9点40才能回家。我不抽烟，酒仅止于浅尝。凌晨1点睡，每天要睡足6个小时。睡前，我一定喝一杯没味的白开水，然后做20分钟的睡觉动员，上了床，马上熟睡。一觉到天亮，决不把疲劳和压力，留到第二天。老师都说我很正常。

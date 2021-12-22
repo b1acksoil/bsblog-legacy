@@ -8,13 +8,13 @@ tags:
   - CLI
 categories:
   - 工具分享
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/top_img.png
-cover: https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/top_img.png
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.png
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.png
 ---
 
 > GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。
 
-![GitHub CLI](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/preview.png)
+![GitHub CLI](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/preview.png)
 
 GitHub CLI 包含许多 GitHub 功能，例如：
 - 查看、创建(create)、克隆(clone)和复刻(fork)仓库
@@ -133,15 +133,15 @@ $ gh auth login
 - Press Enter to open github.com in your browser...
 ```
 
-![输入验证码](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/device-auth-code.png)
+![输入验证码](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-code.png)
 
 输入八位验证码后点击 Continue
 
-![确认信息](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/device-auth-check.png)
+![确认信息](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-check.png)
 
 点击 Authorize github，并确认密码，完成
 
-![验证完成](https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/42150d02/device-auth-done.png)
+![验证完成](https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-done.png)
 
 此时终端内出现以下信息：
 

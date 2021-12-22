@@ -8,8 +8,8 @@ tags:
   - 工具
 categories:
   - 工具分享
-top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/74f1c0a5/top_img.png'
-cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/blog-cdn/img/article/74f1c0a5/top_img.png'
+top_img: 'https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/74f1c0a5/top_img.png'
+cover: 'https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/74f1c0a5/top_img.png'
 ---
 
 看视频正看得兴起的时候突然缓冲半天？想要在没有网的环境下观看，却发现没有会员不能下载？为解决这种层出不穷的麻烦事，在此介绍一款开源的视频下载神器——[You-Get](https://github.com/soimort/you-get)。

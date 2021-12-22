@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'BlackSoil'
+title: 'BsBlog'
 subtitle: 'Redefine the life.'
 description: "BlackSoil (b1acksoil)'s blog, recreated on June 22, 2021.\n本博客致力于分享开发相关的经验。博主为一名自学前端的高中生，如有见解不当之处还请多多指正。\nGitHub地址: https://github.com/b1acksoil/"
 keywords:
@@ -12,7 +12,7 @@ keywords:
   - blog
   - weblog
   - 博客
-author: BlackSoil
+author: b1acksoil
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -21,7 +21,7 @@ timezone: 'Asia/Shanghai'
 url: https://blacksoil.top
 permalink: article/:abbrlink/
 permalink_defaults:
-abbrlink: 
+abbrlink:
   alg: crc32
   rep: hex    # 十六进制
 pretty_urls:
@@ -122,8 +122,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   - type: git
-    repo: 
-      github: git@github.com:b1acksoil/b1acksoil.github.io.git
-      # gitee: git@gitee.com:b1acksoil/b1acksoil.gitee.io.git
-    branch: master
+    repo:
+      github: git@github.com:b1acksoil/bsblog.git
+    branch: gh-pages
   - type: baidu_url_submitter
