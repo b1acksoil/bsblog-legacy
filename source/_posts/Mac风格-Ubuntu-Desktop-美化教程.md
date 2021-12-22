@@ -7,8 +7,8 @@ tags:
   - 美化
 categories:
   - 教程
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.png
-cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.png
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.jpg
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.jpg
 ---
 
 前些天把树莓派4B的系统换成了Ubuntu Desktop 21.04，使用没什么问题，驱动支持也非常好，遂美化之。

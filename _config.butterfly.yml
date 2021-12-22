@@ -45,6 +45,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/b1acksoil || Github
+  fab fa-bilibili: https://github.com/b1acksoil || Github
   fas fa-envelope: mailto:bs@blacksoil.top || Email
 
 # search (搜索)

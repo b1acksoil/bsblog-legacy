@@ -8,12 +8,12 @@ top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/about.jp
 ## This is b1acksoil！
 > 摸鱼中...
 
-[![Mail](https://img.shields.io/badge/Mail-bs@blacksoil.top-grey?labelColor=E95A4E&color=CE4F45&style=for-the-badge&logo=gmail&logoColor=white)](mailto:bs@blacksoil.top)
-[![bilibili](https://img.shields.io/badge/bilibili-b1acksoil-grey?labelColor=00A1D6&color=008EBD&style=for-the-badge&logo=bilibili&logoColor=white)](https://space.bilibili.com/33268404)
+{% btn 'mailto:bs@blacksoil.top',bs@blacksoil.top,fas fa-mail,outline green larger %}
+{% btn 'https://space.bilibili.com/33268404',b1acksoil,fab fa-bilibili,outline blue larger %}
 
-![Learning TypeScript](https://img.shields.io/badge/Learning-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Learning Vue](https://img.shields.io/badge/Learning-Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
-![Coding With Raspberry Pi](https://img.shields.io/badge/Coding_With-Raspberry_Pi_4B-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+{% inlineImg https://img.shields.io/badge/Learning-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white %}
+{% inlineImg https://img.shields.io/badge/Learning-Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white %}
+{% inlineImg https://img.shields.io/badge/Coding_With-Raspberry_Pi_4B-A22846?style=flat-square&logo=raspberrypi&logoColor=white %}
 
 > 我是一名普通的高中生，16岁。住在中国的江南一带，未婚。我在高中上学。每天都要学习到晚上9点40才能回家。我不抽烟，酒仅止于浅尝。凌晨1点睡，每天要睡足6个小时。睡前，我一定喝一杯没味的白开水，然后做20分钟的睡觉动员，上了床，马上熟睡。一觉到天亮，决不把疲劳和压力，留到第二天。老师都说我很正常。
 

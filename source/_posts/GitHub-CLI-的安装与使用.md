@@ -8,8 +8,8 @@ tags:
   - CLI
 categories:
   - 工具分享
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.png
-cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.png
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg
+cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg
 ---
 
 > GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。
