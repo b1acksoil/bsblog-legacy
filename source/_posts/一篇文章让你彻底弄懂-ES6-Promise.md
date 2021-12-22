@@ -11,7 +11,7 @@ top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd
 cover: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.jpg
 ---
 
-ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，异步编程的解决方案 —— Promise。
+ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，异步编程的终极解决方案 —— Promise。
 
 # 同步和异步
 ## 基础概念
