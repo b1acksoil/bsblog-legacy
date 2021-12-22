@@ -2,7 +2,7 @@
 title: 关于
 date: 2021-06-23 04:10:57
 type: about
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/about.jpg
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/about.jpg
 ---
 
 ## This is b1acksoil！

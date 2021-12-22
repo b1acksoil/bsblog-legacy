@@ -1,7 +1,7 @@
 ---
 title: 项目
 date: 2021-07-16 23:57:55
-top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets@latest/img/projects.jpg
+top_img: https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/projects.jpg
 ---
 
 记录一些练手用的小项目
