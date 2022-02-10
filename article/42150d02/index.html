@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>GitHub CLI 的安装与使用 | BsBlog</title><meta name="keywords" content="工具,GitHub,CLI"><meta name="author" content="b1acksoil"><meta name="copyright" content="b1acksoil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。   GitHub CLI 包含许多 GitHub 功能，例如：  查看、创建(create)、克隆(clone)和复刻(fork)仓库 创建、关闭和列出议题(issue)和拉取请求(pull request) 审查、差异(diff)和合并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub CLI 的安装与使用">
+<meta property="og:url" content="https://blacksoil.top/article/42150d02/index.html">
+<meta property="og:site_name" content="BsBlog">
+<meta property="og:description" content="GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。   GitHub CLI 包含许多 GitHub 功能，例如：  查看、创建(create)、克隆(clone)和复刻(fork)仓库 创建、关闭和列出议题(issue)和拉取请求(pull request) 审查、差异(diff)和合并">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg">
+<meta property="article:published_time" content="2021-09-25T08:42:14.000Z">
+<meta property="article:modified_time" content="2022-02-09T10:25:27.421Z">
+<meta property="article:author" content="b1acksoil">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="CLI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blacksoil.top/article/42150d02/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="XF3RNX87JHam6l_IyDMHw1qMReoW2NydfDqO-1PashU"/><meta name="msvalidate.01" content="E90A6FA0EDF286F6B4E5543CAD722A18"/><meta name="baidu-site-verification" content="code-FlPMMh2h1Z"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GitHub CLI 的安装与使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-09 18:25:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-code"></i><span> 项目</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">BsBlog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-code"></i><span> 项目</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GitHub CLI 的安装与使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-25T08:42:14.000Z" title="发表于 2021-09-25 16:42:14">2021-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T10:25:27.421Z" title="更新于 2022-02-09 18:25:27">2022-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="GitHub CLI 的安装与使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/preview.png" alt="GitHub CLI"></p>
+<p>GitHub CLI 包含许多 GitHub 功能，例如：</p>
+<ul>
+<li>查看、创建(create)、克隆(clone)和复刻(fork)仓库</li>
+<li>创建、关闭和列出议题(issue)和拉取请求(pull request)</li>
+<li>审查、差异(diff)和合并(merge)拉取请求</li>
+<li>运行、查看和列出工作流程(workflow)</li>
+<li>创建、列出、查看和删除版本(release/tag)</li>
+<li>创建、编辑、列出、查看和删除 Gist</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>在 Windows 系统上，可以通过包管理器或 <code>msi</code> 安装包的形式安装 CLI。</p>
+<h3 id="使用包管理器安装"><a href="#使用包管理器安装" class="headerlink" title="使用包管理器安装"></a>使用包管理器安装</h3><h4 id="WinGet"><a href="#WinGet" class="headerlink" title="WinGet"></a>WinGet</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>升级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>winget install gh</code></td>
+<td><code>winget upgrade gh</code></td>
+</tr>
+</tbody></table>
+<h4 id="scoop"><a href="#scoop" class="headerlink" title="scoop"></a>scoop</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>升级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>scoop install gh</code></td>
+<td><code>scoop update gh</code></td>
+</tr>
+</tbody></table>
+<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>升级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>choco install gh</code></td>
+<td><code>choco upgrade gh</code></td>
+</tr>
+</tbody></table>
+<h3 id="使用-msi-安装包安装"><a href="#使用-msi-安装包安装" class="headerlink" title="使用 msi 安装包安装"></a>使用 msi 安装包安装</h3><p>如果你此前并未听说或使用过 Windows 下的包管理器，也可以通过下载独立的 <code>msi</code> 安装包的形式安装 CLI。</p>
+<p>最新的安装包可以到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cli/cli/releases/latest">GitHub Release</a> 下载 <code>gh_&lt;version&gt;_windows_&lt;arch&gt;.msi</code>。</p>
+<h2 id="Linux-amp-BSD"><a href="#Linux-amp-BSD" class="headerlink" title="Linux &amp; BSD"></a>Linux &amp; BSD</h2><p>Linux 上由于发行版众多，包管理器不统一，写起来篇幅过长，可以去 GitHub CLI 的官方仓库查看<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md">安装说明</a></p>
+<p>也可以去 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cli/cli/releases/latest">GitHub Release</a> 上下载最新的安装包或二进制文件。(deb/rpm/.tar.gz)</p>
+<p>对于 Termux，直接 <code>pkg install gh</code> 即可。</p>
+<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>对于 macOS，可以使用包管理器或去 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cli/cli/releases/latest">GitHub Release</a> 上下载最新的二进制文件。(.tar.gz)</p>
+<h3 id="使用包管理器"><a href="#使用包管理器" class="headerlink" title="使用包管理器"></a>使用包管理器</h3><h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>更新:</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>brew install gh</code></td>
+<td><code>brew upgrade gh</code></td>
+</tr>
+</tbody></table>
+<h4 id="MacPorts"><a href="#MacPorts" class="headerlink" title="MacPorts"></a>MacPorts</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>更新</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>sudo port install gh</code></td>
+<td><code>sudo port selfupdate &amp;&amp; sudo port upgrade gh</code></td>
+</tr>
+</tbody></table>
+<h4 id="Conda"><a href="#Conda" class="headerlink" title="Conda"></a>Conda</h4><table>
+<thead>
+<tr>
+<th>安装</th>
+<th>更新</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>conda install gh --channel conda-forge</code></td>
+<td><code>conda update gh --channel conda-forge</code></td>
+</tr>
+</tbody></table>
+<p>更多的 Conda 安装选项可以参考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/conda-forge/gh-feedstock#installing-gh">gh-feedstock 页面</a>。</p>
+<h2 id="检查安装"><a href="#检查安装" class="headerlink" title="检查安装"></a>检查安装</h2><p>按照上面的步骤安装成功后，可以输入以下命令来检查是否安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ gh --version</span><br><span class="line">gh version 2.0.0 (2021-08-24)</span><br><span class="line">https://github.com/cli/cli/releases/tag/v2.0.0</span><br></pre></td></tr></table></figure>
+<p>如果出现和上面类似的提示信息，则已安装成功。</p>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><p>成功安装 GitHub CLI 后，我们需要先进行登陆：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ gh auth login</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用上下箭头选择，回车键确认</span></span><br><span class="line"><span class="comment"># 选择登陆的服务器，一般选择 GitHub.com</span></span><br><span class="line">? What account <span class="keyword">do</span> you want to <span class="built_in">log</span> into?  [Use arrows to move, <span class="built_in">type</span> to filter]</span><br><span class="line">&gt; GitHub.com</span><br><span class="line">  GitHub Enterprise Server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择进行 git 操作使用的协议，若已配置 ssh 则可以选择 SSH ，其他情况下选择 HTTPS</span></span><br><span class="line">? What is your preferred protocol <span class="keyword">for</span> Git operations?  [Use arrows to move, <span class="built_in">type</span> to filter]</span><br><span class="line">&gt; HTTPS</span><br><span class="line">  SSH</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果选择 HTTPS</span></span><br><span class="line"><span class="comment"># 是否使用 GitHub 的证书验证 git，推荐选择是</span></span><br><span class="line"><span class="comment"># 输入 y 或 n 并回车确认</span></span><br><span class="line">? Authenticate Git with your GitHub credentials? (Y/n)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果选择 SSH</span></span><br><span class="line"><span class="comment"># 是否将 SSH 公钥绑定到 GitHub 账号上</span></span><br><span class="line"><span class="comment"># 选择 ssh 公钥的路径，若以前进行过绑定则可以选择 Skip 跳过</span></span><br><span class="line">? Upload your SSH public key to your GitHub account?  [Use arrows to move, <span class="built_in">type</span> to filter]</span><br><span class="line">&gt; /home/b1acksoil/.ssh/id_rsa.pub</span><br><span class="line">  Skip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择验证 GitHub CLI 的方式</span></span><br><span class="line"><span class="comment"># 一般选择第一个（浏览器内验证）即可，如果以前在 https://github.com/settings/tokens 生成过令牌也可以选择第二个直接粘贴验证</span></span><br><span class="line">? How would you like to authenticate GitHub CLI?  [Use arrows to move, <span class="built_in">type</span> to filter]</span><br><span class="line">&gt; Login with a web browser</span><br><span class="line">  Paste an authentication token</span><br><span class="line"></span><br><span class="line"><span class="comment"># 记下给出的一次性的八位验证码，随后按回车键打开验证页面</span></span><br><span class="line">! First copy your one-time code: 0287-9E22</span><br><span class="line">- Press Enter to open github.com <span class="keyword">in</span> your browser...</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-code.png" alt="输入验证码"></p>
+<p>输入八位验证码后点击 Continue</p>
+<p><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-check.png" alt="确认信息"></p>
+<p>点击 Authorize github，并确认密码，完成</p>
+<p><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/device-auth-done.png" alt="验证完成"></p>
+<p>此时终端内出现以下信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按回车键继续</span></span><br><span class="line">✓ Authentication complete. Press Enter to <span class="built_in">continue</span>...</span><br><span class="line"></span><br><span class="line">- gh config <span class="built_in">set</span> -h github.com git_protocol ssh</span><br><span class="line">✓ Configured git protocol</span><br><span class="line">✓ Uploaded the SSH key to your GitHub account: /home/b1acksoil/.ssh/id_rsa.pub</span><br><span class="line">✓ Logged <span class="keyword">in</span> as b1acksoil</span><br></pre></td></tr></table></figure>
+<p>恭喜，你已经登录成功了！</p>
+<div class="note info flat"><p><strong>Tips:</strong> 以后也可以使用 <code>gh auth status</code> 查看登录状态，<code>gh auth logout</code> 登出。</p>
+</div>
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>由于篇幅限制，本节只介绍较为常用的几种命令。更多的使用方法及详细说明请前往<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cli.github.com/manual/">官方手册</a>查看。</p>
+<p>关于各个命令的参数帮助，可以使用 <code>gh 命令 --help</code> 查看。如 <code>gh repo create --help</code>。</p>
+<h2 id="仓库操作"><a href="#仓库操作" class="headerlink" title="仓库操作"></a>仓库操作</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>使用 <code>gh repo create</code> 在本地和 GitHub 服务器上同步创建创建一个仓库。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh repo create [&lt;name&gt;] [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用当前目录的名称创建仓库</span></span><br><span class="line">$ git init my-project</span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ gh repo create</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定名称创建仓库</span></span><br><span class="line">$ gh repo create my-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在组织(organization)中创建仓库</span></span><br><span class="line">$ gh repo create cli/my-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭仓库的 issues，wiki 功能</span></span><br><span class="line">$ gh repo create --enable-issues=<span class="literal">false</span> --enable-wiki=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h3><p>使用 <code>gh repo clone</code> 将 GitHub 上的仓库克隆到本地。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh repo <span class="built_in">clone</span> &lt;repository&gt; [&lt;directory&gt;] [-- &lt;gitflags&gt;...]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆当前登录账号下的仓库</span></span><br><span class="line">$ gh repo <span class="built_in">clone</span> mgs-site</span><br><span class="line"></span><br><span class="line"><span class="comment"># 克隆指定仓库 (owner/repo)</span></span><br><span class="line">$ gh repo <span class="built_in">clone</span> ppy/osu</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 git 选项</span></span><br><span class="line"><span class="comment"># 注：git 选项前需要加上 &#x27;--&#x27;，例如</span></span><br><span class="line">$ gh repo <span class="built_in">clone</span> ppy/osu -- --depth=1</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>使用 <code>gh repo view</code> 命令查看仓库的信息。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh repo view [&lt;repository&gt;] [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 b1acksoil(拥有者) 的 mgs-site(仓库名)</span></span><br><span class="line">$ gh repo view b1acksoil/mgs-site</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前处于的仓库</span></span><br><span class="line">$ gh repo view</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器中打开（使用 -w 或 --web）</span></span><br><span class="line">$ gh repo view --web</span><br></pre></td></tr></table></figure>
+
+<h3 id="Fork"><a href="#Fork" class="headerlink" title="Fork"></a>Fork</h3><p>使用 <code>gh repo fork</code> 命令 Fork 一个仓库。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh repo fork [&lt;repository&gt;] [-- &lt;gitflags&gt;...] [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Fork 仓库 ppy/osu 并克隆到本地</span></span><br><span class="line">$ gh repo fork ppy/osu</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fork 当前处于的仓库</span></span><br><span class="line">$ gh repo fork</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fork 但不克隆到本地</span></span><br><span class="line">$ gh repo fork ppy/osu --<span class="built_in">clone</span>=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Pull-Requests"><a href="#Pull-Requests" class="headerlink" title="Pull Requests"></a>Pull Requests</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>使用 <code>gh pr create</code> 命令创建一个 Pull Request。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh pr create [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定标题和内容</span></span><br><span class="line">$ gh pr create --title <span class="string">&quot;The bug is fixed&quot;</span> --body <span class="string">&quot;Everything works again&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分开输入标题和内容</span></span><br><span class="line">$ gh pr create</span><br><span class="line">Creating pull request <span class="keyword">for</span> feature-branch into main <span class="keyword">in</span> owner/repo</span><br><span class="line">? Title &lt;标题&gt;</span><br><span class="line">? Body [(e) to launch nano, enter to skip]</span><br><span class="line">http://github.com/owner/repo/pull/1</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p>使用 <code>gh pr merge</code> 命令合并一个 Pull Request。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh pr merge [&lt;number&gt; | &lt;url&gt; | &lt;branch&gt;] [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 合并 id 为 5 的 Pull Request</span></span><br><span class="line">$ gh pr merge 5</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并名为 dev 的分支</span></span><br><span class="line">$ gh pr merge dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>使用 <code>gh pr status</code> 查看当前仓库的 Pull Requests 状态。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh pr status [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ gh pr status</span><br><span class="line">Current branch</span><br><span class="line">  <span class="comment">#12 Remove the test feature [user:patch-2]</span></span><br><span class="line">   - All checks failing - Review required</span><br><span class="line"></span><br><span class="line">Created by you</span><br><span class="line">  You have no open pull requests</span><br><span class="line"></span><br><span class="line">Requesting a code review from you</span><br><span class="line">  <span class="comment">#13 Fix tests [branch]</span></span><br><span class="line">  - 3/4 checks failing - Review required</span><br><span class="line">  <span class="comment">#15 New feature [branch]</span></span><br><span class="line">   - Checks passing - Approved</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看-1"><a href="#查看-1" class="headerlink" title="查看"></a>查看</h3><p>使用 <code>gh pr view</code> 命令查看指定的 Pull Request 信息。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh pr view [&lt;number&gt; | &lt;url&gt; | &lt;branch&gt;] [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 id 为 5 的 Pull Request</span></span><br><span class="line">$ gh pr view 5</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器内查看（使用 -w 或 --web）</span></span><br><span class="line">$ gh pr view 5 --web</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前分支的 PR</span></span><br><span class="line">$ gh pr view</span><br></pre></td></tr></table></figure>
+
+<h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><h3 id="创建-2"><a href="#创建-2" class="headerlink" title="创建"></a>创建</h3><p>使用 <code>gh issue create</code> 命令创建 Issue</p>
+<p>用法：</p>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定标题和内容创建</span></span><br><span class="line">$ gh issue create --title <span class="string">&quot;I found a bug&quot;</span> --body <span class="string">&quot;Nothing works&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分开输入标题和内容</span></span><br><span class="line">$ gh issue create</span><br><span class="line">Creating issue <span class="keyword">in</span> owner/repo</span><br><span class="line">? Title &lt;标题&gt;</span><br><span class="line">? Body [(e) to launch nano, enter to skip]</span><br><span class="line">http://github.com/owner/repo/issues/1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定标签创建（可使用多个 --label，若写在一起则用逗号分隔）</span></span><br><span class="line">$ gh issue create --label <span class="string">&quot;bug,help wanted&quot;</span></span><br><span class="line">$ gh issue create --label bug --label <span class="string">&quot;help wanted&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><p>使用 <code>gh issue close</code> 关闭一个 Issue。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh issue close &#123;&lt;number&gt; | &lt;url&gt;&#125; [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭 id 为 2 的 issue</span></span><br><span class="line">$ gh issue close 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看-2"><a href="#查看-2" class="headerlink" title="查看"></a>查看</h3><p>使用 <code>gh issue view</code> 命令查看指定的 Pull Request 信息。</p>
+<p>用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gh issue view &#123;&lt;number&gt; | &lt;url&gt;&#125; [flags]</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 id 为 20 的 issue</span></span><br><span class="line">$ gh issue view 20</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器内查看（使用 -w 或 --web）</span></span><br><span class="line">$ gh issue view 5 --web</span><br></pre></td></tr></table></figure>
+
+<p>GitHub CLI 还有很多实用的功能，如 <code>gh release</code>，<code>gh browse</code>，<code>gh workflow</code> 等等。可以前往<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cli.github.com/manual/">官方手册</a>获取更多信息。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">b1acksoil</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blacksoil.top/article/42150d02/">https://blacksoil.top/article/42150d02/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blacksoil.top" target="_blank">BsBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a><a class="post-meta__tags" href="/tags/CLI/">CLI</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg" data-sites="qq,qzone,wechat,weibo,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/article/2f68f439/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/archives.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">手动编译像素画软件 Aseprite</div></div></a></div><div class="next-post pull-right"><a href="/article/972a1a27/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">FFmpeg的基本使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/article/972a1a27/" title="FFmpeg的基本使用"><img class="cover" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-25</div><div class="title">FFmpeg的基本使用</div></div></a></div><div><a href="/article/74f1c0a5/" title="视频下载神器——You-Get的安装与使用"><img class="cover" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/74f1c0a5/top_img.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-27</div><div class="title">视频下载神器——You-Get的安装与使用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">b1acksoil</div><div class="author-info__description">Also known as 'b1acksoil'.</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/b1acksoil"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="mailto:bs@blacksoil.top" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">好耶！是复活的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows"><span class="toc-number">1.1.</span> <span class="toc-text">Windows</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用包管理器安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#WinGet"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">WinGet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scoop"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">scoop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Chocolatey"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">Chocolatey</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-msi-%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用 msi 安装包安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-amp-BSD"><span class="toc-number">1.2.</span> <span class="toc-text">Linux &amp; BSD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#macOS"><span class="toc-number">1.3.</span> <span class="toc-text">macOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">1.3.1.</span> <span class="toc-text">使用包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Homebrew"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">Homebrew</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MacPorts"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">MacPorts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Conda"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">Conda</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85"><span class="toc-number">1.4.</span> <span class="toc-text">检查安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">登录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%93%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-number">3.1.</span> <span class="toc-text">仓库操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-number">3.1.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E9%9A%86"><span class="toc-number">3.1.2.</span> <span class="toc-text">克隆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">3.1.3.</span> <span class="toc-text">查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fork"><span class="toc-number">3.1.4.</span> <span class="toc-text">Fork</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pull-Requests"><span class="toc-number">3.2.</span> <span class="toc-text">Pull Requests</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6"><span class="toc-number">3.2.2.</span> <span class="toc-text">合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81"><span class="toc-number">3.2.3.</span> <span class="toc-text">状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-1"><span class="toc-number">3.2.4.</span> <span class="toc-text">查看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Issues"><span class="toc-number">3.3.</span> <span class="toc-text">Issues</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-2"><span class="toc-number">3.3.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD"><span class="toc-number">3.3.2.</span> <span class="toc-text">关闭</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-2"><span class="toc-number">3.3.3.</span> <span class="toc-text">查看</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/2f68f439/" title="手动编译像素画软件 Aseprite"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/archives.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动编译像素画软件 Aseprite"/></a><div class="content"><a class="title" href="/article/2f68f439/" title="手动编译像素画软件 Aseprite">手动编译像素画软件 Aseprite</a><time datetime="2022-02-09T11:00:12.000Z" title="发表于 2022-02-09 19:00:12">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/42150d02/" title="GitHub CLI 的安装与使用"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub CLI 的安装与使用"/></a><div class="content"><a class="title" href="/article/42150d02/" title="GitHub CLI 的安装与使用">GitHub CLI 的安装与使用</a><time datetime="2021-09-25T08:42:14.000Z" title="发表于 2021-09-25 16:42:14">2021-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/972a1a27/" title="FFmpeg的基本使用"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FFmpeg的基本使用"/></a><div class="content"><a class="title" href="/article/972a1a27/" title="FFmpeg的基本使用">FFmpeg的基本使用</a><time datetime="2021-08-24T17:10:38.000Z" title="发表于 2021-08-25 01:10:38">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac风格 Ubuntu Desktop 美化教程"/></a><div class="content"><a class="title" href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程">Mac风格 Ubuntu Desktop 美化教程</a><time datetime="2021-07-28T08:51:15.000Z" title="发表于 2021-07-28 16:51:15">2021-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一篇文章让你彻底弄懂 ES6 Promise"/></a><div class="content"><a class="title" href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise">一篇文章让你彻底弄懂 ES6 Promise</a><time datetime="2021-07-14T13:14:10.000Z" title="发表于 2021-07-14 21:14:10">2021-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By b1acksoil</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = new Waline(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://blacksoil-blog-comments-waline.vercel.app/',
+      path: location.pathname,
+      visitor: true,
+      dark: 'html[data-theme="dark"]'
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(initWaline)
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

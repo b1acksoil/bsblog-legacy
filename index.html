@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>BsBlog - Redefine the life.</title><meta name="keywords" content="blacksoil,b1acksoil,blog,weblog,博客"><meta name="author" content="b1acksoil"><meta name="copyright" content="b1acksoil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="BlackSoil (b1acksoil)&#39;s blog, recreated on June 22, 2021. 本博客致力于分享开发相关的经验。博主为一名自学前端的高中生，如有见解不当之处还请多多指正。 GitHub地址: https:&#x2F;&#x2F;github.com&#x2F;b1acksoil&#x2F;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BsBlog">
+<meta property="og:url" content="https://blacksoil.top/index.html">
+<meta property="og:site_name" content="BsBlog">
+<meta property="og:description" content="BlackSoil (b1acksoil)&#39;s blog, recreated on June 22, 2021. 本博客致力于分享开发相关的经验。博主为一名自学前端的高中生，如有见解不当之处还请多多指正。 GitHub地址: https:&#x2F;&#x2F;github.com&#x2F;b1acksoil&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg">
+<meta property="article:author" content="b1acksoil">
+<meta property="article:tag" content="blacksoil">
+<meta property="article:tag" content="b1acksoil">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="weblog">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blacksoil.top/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="XF3RNX87JHam6l_IyDMHw1qMReoW2NydfDqO-1PashU"/><meta name="msvalidate.01" content="E90A6FA0EDF286F6B4E5543CAD722A18"/><meta name="baidu-site-verification" content="code-FlPMMh2h1Z"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'BsBlog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-02-10 16:21:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-code"></i><span> 项目</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/home.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">BsBlog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-code"></i><span> 项目</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">BsBlog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="mailto:bs@blacksoil.top" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/article/2f68f439/" title="手动编译像素画软件 Aseprite"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/archives.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动编译像素画软件 Aseprite"></a></div><div class="recent-post-info"><a class="article-title" href="/article/2f68f439/" title="手动编译像素画软件 Aseprite">手动编译像素画软件 Aseprite</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-09T11:00:12.000Z" title="发表于 2022-02-09 19:00:12">2022-02-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/2f68f439/#post-comment"><span class="waline-comment-count" id="/article/2f68f439/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">最近学 unity，想自己画点像素画，就去找了找有什么好用的像素画软件。首先就想到了大名鼎鼎的 Aseprite，去 Steam 上搜了下，70RMB。
+对于穷学生党来说 70 也不少了（）何况我不久前才收了一台米板2，目前处于囊中羞涩的状态。搜索一番发现 Aseprite 居然是在 GitHub 上开源的（收费软件开源第一次见），官方 repo 里也提供了编译说明，遂自行编译之。
+本文仅涉及 Windows 平台下的编译，若是 macOS 或是 Linux 平台可自行查看官方编译说明（方法大同小异，甚至更简单，因为不用装VS）
+平台：Windows 10（11理论上也行，可自行尝试）
+准备工作安装 Visual Studio 2019+Windows 下的编译需要用到 Visual Studio Community （微软的IDE）的 2019 或以上的版本，我使用的是 VS2022
+前往 Visual Studio Downloads 下载社区版
+
+下载完成打开安装程序，选择 “使用 C++ 的桌面开发”，并在右侧至少勾选 “MSVC C++ x64/x86 生成工具” 和 “Wi ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/42150d02/" title="GitHub CLI 的安装与使用"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub CLI 的安装与使用"></a></div><div class="recent-post-info"><a class="article-title" href="/article/42150d02/" title="GitHub CLI 的安装与使用">GitHub CLI 的安装与使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-25T08:42:14.000Z" title="发表于 2021-09-25 16:42:14">2021-09-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/42150d02/#post-comment"><span class="waline-comment-count" id="/article/42150d02/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+GitHub CLI 是一个命令行工具，可将拉取请求、议题、GitHub Actions 和其他 GitHub 功能引入终端，使您可以在一个地方完成所有工作。
+
+
+GitHub CLI 包含许多 GitHub 功能，例如：
+
+查看、创建(create)、克隆(clone)和复刻(fork)仓库
+创建、关闭和列出议题(issue)和拉取请求(pull request)
+审查、差异(diff)和合并(merge)拉取请求
+运行、查看和列出工作流程(workflow)
+创建、列出、查看和删除版本(release/tag)
+创建、编辑、列出、查看和删除 Gist
+
+安装Windows在 Windows 系统上，可以通过包管理器或 msi 安装包的形式安装 CLI。
+使用包管理器安装WinGet
+
+
+安装
+升级
+
+
+
+winget install gh
+winget upgrade gh
+
+
+scoop
+
+
+安装
+升级
+
+
+
+scoop install gh
+scoop update gh
+
+
+Chocolatey
+
+
+安装
+升级
+
+
+
+choco install gh
+choco upgra ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/972a1a27/" title="FFmpeg的基本使用"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FFmpeg的基本使用"></a></div><div class="recent-post-info"><a class="article-title" href="/article/972a1a27/" title="FFmpeg的基本使用">FFmpeg的基本使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-24T17:10:38.000Z" title="发表于 2021-08-25 01:10:38">2021-08-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/972a1a27/#post-comment"><span class="waline-comment-count" id="/article/972a1a27/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。
+——百度百科
+
+简单来说，FFmpeg 是一套集视频/音频的格式转换、合成、裁切等等实用功能于一体的开源工具。截止本文写作日期，FFmpeg 已支持 365 种不同的视频/音频格式。FFmpeg 发展十余年，在世界上的应用十分广泛，例如有时我们用到的优酷，爱奇艺等播放器软件，内部都集成了 FFmpeg （虽然一些是修改过的）。FFmpeg 内置了领先的音视频编码库，可以有效利用多线程和GPU加速，为用户在诸多使用场景下提供了优秀的体验。
+FFmpeg 官网
+安装Windows此为官方网站上给出的 Windows Build 渠道，请放心下载
+
+
+前往 FFmpeg Windows Builds，往下翻找到 release 一栏，点击第一个链接下载（ffmpeg-release-full ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac风格 Ubuntu Desktop 美化教程"></a></div><div class="recent-post-info"><a class="article-title" href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程">Mac风格 Ubuntu Desktop 美化教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-28T08:51:15.000Z" title="发表于 2021-07-28 16:51:15">2021-07-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/2682f5c2/#post-comment"><span class="waline-comment-count" id="/article/2682f5c2/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前些天把树莓派4B的系统换成了Ubuntu Desktop 21.04，使用没什么问题，驱动支持也非常好，遂美化之。
+本教程适用于任何Ubuntu Desktop系统（18.04及以上），不仅限于树莓派。
+先看看美化前的效果：
+
+再看看美化后：
+
+准备工作
+一台安装了 Ubuntu Desktop 系统（18.04版本及以上）的设备
+手
+
+使用前请将软件源更新到最新版本：
+1$ sudo apt update
+
+安装美化管理工具打开终端，安装 gnome-tweaks 工具
+1$ sudo apt install gnome-tweaks chrome-gnome-shell -y
+
+随后打开 https://extensions.gnome.org/ ，点击 Click here to install browser extension 安装浏览器插件
+
+随后搜索 User Themes 插件安装，点击页面右上角的开关，把OFF改成ON就可以了，如果弹出确认窗口就点确认
+
+Dock 栏Ubuntu Desktop 自带的 Dock 栏并不是很好用，可定制性也不强，这里使用 Dash  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一篇文章让你彻底弄懂 ES6 Promise"></a></div><div class="recent-post-info"><a class="article-title" href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise">一篇文章让你彻底弄懂 ES6 Promise</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-14T13:14:10.000Z" title="发表于 2021-07-14 21:14:10">2021-07-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/11fd8cd0/#post-comment"><span class="waline-comment-count" id="/article/11fd8cd0/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">ES6 中新增了一个非常重要的特性，即本篇文章介绍的主角，异步编程的终极解决方案 —— Promise。
+同步和异步基础概念在介绍Promise之前，我们先来说说什么是同步，什么是异步，以及两者间的区别。
+同步、异步关注的是消息通信机制。在一般编程中，
+同步 (Synchronous) 是指在程序执行流程中，方法一步一步依次执行，后面的方法需要等前面的方法执行结束之后才能执行。
+异步 (Asynchronous) 是指在程序执行流程中，方法有其独立的时间线，不会阻塞主线程中其他方法的执行，而是执行结束后通过回调来通知主线程执行结果。
+举个通俗一点的例子： 你去某机关单位办事，先去提交申请，然后一直傻站在那里等结果出来，拿到结果再回家，这种一步一步依次进行的方法就是同步；如果你提交了申请就去做些别的事情，例如看看电影逛逛街，等处理结果出来了打电话通知你（回调）再回去拿，这种方式就是异步。
+异步的使用情景在 JS 中，最常见的需要用到异步的情景就是网络请求了。我们把 JS 的执行过程想象成一条时间轴，所有的 JS 代码都是同步执行的。如果我们要进行一次网络请求，例如获取用户的数据，那么就需 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/74f1c0a5/" title="视频下载神器——You-Get的安装与使用"><img class="post_bg" src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/74f1c0a5/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="视频下载神器——You-Get的安装与使用"></a></div><div class="recent-post-info"><a class="article-title" href="/article/74f1c0a5/" title="视频下载神器——You-Get的安装与使用">视频下载神器——You-Get的安装与使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-26T17:43:57.000Z" title="发表于 2021-06-27 01:43:57">2021-06-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/article/74f1c0a5/#post-comment"><span class="waline-comment-count" id="/article/74f1c0a5/"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">看视频正看得兴起的时候突然缓冲半天？想要在没有网的环境下观看，却发现没有会员不能下载？为解决这种层出不穷的麻烦事，在此介绍一款开源的视频下载神器——You-Get。
+介绍You-Get 是一款由 soimort 使用Python开发的开源命令行视频/图片/音频下载器。截止本文写作日期，You-Get已支持78家网站的资源下载，而且支持版权视频下载（这并不意味着可以无会员白嫖会员资源，后面会讲）
+网站支持列表
+    
+
+
+网站
+URL
+视频
+图片
+音频
+
+
+
+163网易视频网易云音乐
+http://v.163.com/http://music.163.com/
+✓
+
+✓
+
+
+56网
+http://www.56.com/
+✓
+
+
+
+
+AcFun
+http://www.acfun.cn/
+✓
+
+
+
+
+Baidu百度贴吧
+http://tieba.baidu.com/
+✓
+✓
+
+
+
+爆米花网
+http://www.baomihua.com/
+✓
+
+
+
+
+bilibili哔哩哔哩
+http://www.bilibili.com/
+✓
+✓
+✓
+
+
+豆瓣
+http://www.douban.com ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">b1acksoil</div><div class="author-info__description">Also known as 'b1acksoil'.</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/b1acksoil"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://github.com/b1acksoil" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="mailto:bs@blacksoil.top" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">好耶！是复活的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/2f68f439/" title="手动编译像素画软件 Aseprite"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/archives.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动编译像素画软件 Aseprite"/></a><div class="content"><a class="title" href="/article/2f68f439/" title="手动编译像素画软件 Aseprite">手动编译像素画软件 Aseprite</a><time datetime="2022-02-09T11:00:12.000Z" title="发表于 2022-02-09 19:00:12">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/42150d02/" title="GitHub CLI 的安装与使用"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/42150d02/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub CLI 的安装与使用"/></a><div class="content"><a class="title" href="/article/42150d02/" title="GitHub CLI 的安装与使用">GitHub CLI 的安装与使用</a><time datetime="2021-09-25T08:42:14.000Z" title="发表于 2021-09-25 16:42:14">2021-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/972a1a27/" title="FFmpeg的基本使用"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/972a1a27/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FFmpeg的基本使用"/></a><div class="content"><a class="title" href="/article/972a1a27/" title="FFmpeg的基本使用">FFmpeg的基本使用</a><time datetime="2021-08-24T17:10:38.000Z" title="发表于 2021-08-25 01:10:38">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/2682f5c2/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac风格 Ubuntu Desktop 美化教程"/></a><div class="content"><a class="title" href="/article/2682f5c2/" title="Mac风格 Ubuntu Desktop 美化教程">Mac风格 Ubuntu Desktop 美化教程</a><time datetime="2021-07-28T08:51:15.000Z" title="发表于 2021-07-28 16:51:15">2021-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise"><img src="https://cdn.jsdelivr.net/gh/b1acksoil/bsblog-assets/img/article/11fd8cd0/top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一篇文章让你彻底弄懂 ES6 Promise"/></a><div class="content"><a class="title" href="/article/11fd8cd0/" title="一篇文章让你彻底弄懂 ES6 Promise">一篇文章让你彻底弄懂 ES6 Promise</a><time datetime="2021-07-14T13:14:10.000Z" title="发表于 2021-07-14 21:14:10">2021-07-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">工具分享</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CLI/" style="font-size: 1.1em; color: #999">CLI</a> <a href="/tags/ES6/" style="font-size: 1.1em; color: #999">ES6</a> <a href="/tags/FFmpeg/" style="font-size: 1.1em; color: #999">FFmpeg</a> <a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/Ubuntu/" style="font-size: 1.1em; color: #999">Ubuntu</a> <a href="/tags/You-Get/" style="font-size: 1.1em; color: #999">You-Get</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.5em; color: #99a9bf">工具</a> <a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.1em; color: #999">美化</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">2022.02</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">2021.09</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">2021.08</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">2021.07</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">2021.06</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-06-22T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">11k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-02-10T08:21:16.484Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By b1acksoil</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  function loadWaline () {
+    function initWaline () {
+      let initData = {
+        el: null,
+        serverURL: 'https://blacksoil-blog-comments-waline.vercel.app/',
+      }
+      const waline = new Waline(initData)
+    }
+
+    if (typeof Waline === 'function') initWaline() 
+    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(initWaline)
+  }
+
+  window.pjax ? loadWaline() : window.addEventListener('load', loadWaline)
+})()</script><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["Redefine the life."],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Redefine the life.'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
